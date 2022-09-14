@@ -18,7 +18,8 @@ package cz.spsmb.ctvrtak.c_spring.a_config.main.java;
  *
  * 3. v balíčku cz.spsmb.ctvrtak.c_spring.a_config.test.java vytvořte třídu MyDocumentTest, která
  * obsahuje členskou proměnnou
- * private SearchEngine engine = new MySearchEngine;
+ *
+ *
  *
  * Třída MyDocumentTest bude pomocí frameworku junit.jupiter (v projektu PRO4 již zaimplementován)
  * implementovat metodu
@@ -31,4 +32,5 @@ package cz.spsmb.ctvrtak.c_spring.a_config.main.java;
  * 4. výsledek pošlete pull-requestem zpátky na github pro oznámkování.
  */
 public class Zadani {
+
 }
