@@ -31,4 +31,78 @@ package cz.spsmb.ctvrtak.c_spring.a_config.main.java;
  * 4. výsledek pošlete pull-requestem zpátky na github pro oznámkování.
  */
 public class Zadani {
+    public class Type{
+        private String name;
+        private String desc;
+        private String extension;
+
+        public Type(String name, String desc, String extension) {
+            this.name = name;
+            this.desc = desc;
+            this.extension = extension;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getDesc() {
+            return desc;
+        }
+
+        public void setDesc(String desc) {
+            this.desc = desc;
+        }
+
+        public String getExtension() {
+            return extension;
+        }
+
+        public void setExtension(String extension) {
+            this.extension = extension;
+        }
+
+    }
+    public class Doc{
+
+        private String name;
+        private String location;
+        Type type;
+
+        public Doc(String name, String location, Type type) {
+            this.name = name;
+            this.location = location;
+            this.type = type;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getLocation() {
+            return location;
+        }
+
+        public void setLocation(String location) {
+            this.location = location;
+        }
+
+        public Type getType() {
+            return type;
+        }
+
+        public void setType(Type type) {
+            this.type = type;
+        }
+
+
+    }
 }
