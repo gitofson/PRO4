@@ -31,4 +31,12 @@ package cz.spsmb.ctvrtak.c_spring.a_config.main.java;
  * 4. výsledek pošlete pull-requestem zpátky na github pro oznámkování.
  */
 public class Zadani {
+
+/**
+ *
+ * Autor: Vojtěch Vít
+ * cs snad to bude tak na 3
+ *
+ */
+
 }
