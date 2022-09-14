@@ -1,4 +1,14 @@
 package cz.spsmb.ctvrtak.c_spring.a_config.main.java;
+/***
+ * Autor: Christian
+ * 1. vytvořím storage() a co pak?
+ * 2. listAll() a findByType bude vracet null, jaký je postup předělání těchto rozhraní?
+ * 3. Jakou třídu Assertions? První zmínka je až u kontroly
+ * 4. private SearchEngine engine = new MySearchEngine; chybí závorky u MySearchEngine
+ */
+
+
+
 
 /***
  * 1.
