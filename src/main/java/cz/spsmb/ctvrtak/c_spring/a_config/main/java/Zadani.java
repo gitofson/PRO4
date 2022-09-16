@@ -22,7 +22,7 @@ package cz.spsmb.ctvrtak.c_spring.a_config.main.java;
  *
  * Třída MyDocumentTest bude pomocí frameworku junit.jupiter (v projektu PRO4 již zaimplementován)
  * implementovat metodu
- * @Test testFindByType(), která otestuje, zda vámi zadaný typ uvnitř této metody je nalezen pomocí
+ * @TestType() testFindBy, která otestuje, zda vámi zadaný typ uvnitř této metody je nalezen pomocí
  * metody engine.findByType(vasDocumentType) a metodu
  * @Test testListAll, která zkontroluje, zda metoda engine.listAll(vrací správný počet argumentů).
  *
