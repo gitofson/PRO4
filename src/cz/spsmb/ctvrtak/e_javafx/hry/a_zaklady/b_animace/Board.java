@@ -19,6 +19,7 @@ public class Board extends javafx.animation.AnimationTimer {
     private Image star;
     // private Timer timer;
     private int x, y;
+    private int x_velocity, y_velocity;
     private Canvas canvas;
 
     public Board() {
@@ -37,12 +38,23 @@ public class Board extends javafx.animation.AnimationTimer {
 
     @Override
     public void handle(long l) {
-        x += 1;
-        y += 1;
+        x += x_velocity;
+        y += y_velocity;
 
         if (y > B_HEIGHT) {
-            y = INITIAL_Y;
-            x = INITIAL_X;
+            y_velocity = -y_velocity;
+        }
+
+        if(x > B_WIDTH) {
+            x_velocity = -x_velocity;
+        }
+
+        if (y < 0) {
+            y_velocity = -y_velocity;
+        }
+
+        if (x < 0) {
+            x_velocity = -x_velocity;
         }
         this.drawStar();
     }
@@ -59,9 +71,28 @@ public class Board extends javafx.animation.AnimationTimer {
         loadImage();
         x = INITIAL_X;
         y = INITIAL_Y;
+
+        setRandomVelocity();
+    }
+
+    private void setRandomVelocity(){
+        if(x_velocity < 0){
+            x_velocity = (int) (Math.random() * 10);
+        } else {
+            x_velocity = (int) (Math.random() * 10) * -1;
+        }
+
+        if(y_velocity < 0){
+            y_velocity = (int) (Math.random() * 10);
+        } else {
+            y_velocity = (int) (Math.random() * 10) * -1;
+        }
     }
     private void drawStar() {
         GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.setFill(Color.BLACK);
+        gc.fillRect(0,0, canvas.getWidth(), canvas.getHeight());
+
         gc.drawImage(star, x, y);
         gc.setLineWidth(2);
         gc.setStroke(Color.BLACK);

@@ -52,10 +52,33 @@ public class Board extends AnimationTimer {
     private void step() {
         spaceShip.move();
         GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.setFill(javafx.scene.paint.Color.BLACK);
+        gc.fillRect(0,0,canvas.getWidth(),canvas.getHeight());
+
+        for (Projectile p : spaceShip.getProjectiles()) {
+            if(p.getX() > canvas.getWidth() || p.getX() < 0 || p.getY() > canvas.getHeight() || p.getY() < 0) {
+                spaceShip.getProjectiles().remove(p);
+                continue;
+            }
+            for (Enemy e : spaceShip.getEnemies()) {
+                if (p.getX() + p.getHeight() >= e.getX() - e.getWidth() && p.getX() - p.getHeight() <= e.getX() + e.getWidth() && p.getY() + p.getWidth() >= e.getY() - e.getHeight() && p.getY() - p.getWidth() <= e.getY() + e.getHeight()) {
+                    gc.drawImage(e.getExplosion(), e.getX(), e.getY());
+                    spaceShip.getEnemies().remove(e);
+                    spaceShip.getProjectiles().remove(p);
+                }
+            }
+            p.move();
+            gc.drawImage(p.getImage(), p.getX(), p.getY());
+        }
+
+        for(Enemy e : spaceShip.getEnemies()) {
+            gc.drawImage(e.getImage(), e.getX(), e.getY());
+        }
+
+
         gc.drawImage(spaceShip.getImage(), spaceShip.getX(), spaceShip.getY());
-        //repaint(spaceShip.getX()-1, spaceShip.getY()-1,
-        //        spaceShip.getWidth()+2, spaceShip.getHeight()+2);
     }
+
 /*
     private class TAdapter extends KeyAdapter {
 

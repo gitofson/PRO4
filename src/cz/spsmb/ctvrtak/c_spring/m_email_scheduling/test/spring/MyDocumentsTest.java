@@ -13,7 +13,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.stereotype.Repository;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -38,24 +40,22 @@ public class MyDocumentsTest {
 	}
 	
 	@Test
-	@Disabled
 	public void testEmail() throws InterruptedException{
 		log.debug("Testing Email...");
 		Assertions.assertNotNull(email);
 		long start = new Date().getTime();
-		email.send("ahoj@seznam.cz", "stemberk@spsmb.cz", "Hello World1!", "Hello There!!");
+		email.send("franta@seznam.cz", "stemberk@spsmb.cz", "Hello World1!", "Hello There!!");
 		long end = new Date().getTime();
 		long time = (end - start)/1000;
 		log.debug("Sending email done. Took: " + time + " seconds.");
 	}
 	
 	@Test
-	@Disabled
 	public void testAsyncEmail() throws InterruptedException{
 		log.debug("Testing Async Email...");
 		Assertions.assertNotNull(email);
 		long start = new Date().getTime();
-		email.sendAsync("ahoj@seznam.cz", "stemberk@spsmb.cz", "Hello World Async, 2. pokus!", "Hello There!!");
+		email.sendAsync("franta@seznam.cz", "stemberk@spsmb.cz", "Hello World Async, 2. pokus!", "Hello There!!");
 		long end = new Date().getTime();
 		long time = (end - start)/1000;
 		log.debug("Sending Async email done. Took: " + time + " seconds.");
