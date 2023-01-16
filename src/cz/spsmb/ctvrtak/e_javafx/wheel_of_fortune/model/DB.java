@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 public class DB {
-    private static String url = "jdbc:sqlite:Y:\\stemberk\\verejne_zaci\\wofb.db";
+    private static String url = "jdbc:sqlite:Y:\\stemberk\\verejne_zaci\\wofa.db";
     //private static String url = "jdbc:sqlite:wofa.db";
     private static Connection conn = null;
     static{
@@ -86,6 +86,15 @@ public class DB {
                 "INSERT INTO S_Student (S_FirstName, S_LastName) VALUES " +
                         "('Vít', 'Štemberk'),"+
                         "('Ondřej', 'Merhaut');";
+        Statement stmt = conn.createStatement();
+        stmt.executeUpdate(sql);
+
+    }
+    public static void fillAStudentsOfEvil() throws SQLException {
+        String sql =
+                "INSERT INTO S_Student (S_FirstName, S_LastName) VALUES " +
+                        "('Lukáš', 'Škrabánek'),"+
+                        "('Adam', 'Novák');";
         Statement stmt = conn.createStatement();
         stmt.executeUpdate(sql);
 

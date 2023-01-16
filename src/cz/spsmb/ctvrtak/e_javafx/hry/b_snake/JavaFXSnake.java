@@ -8,4 +8,8 @@ public class JavaFXSnake extends Application {
     public void start(Stage stage) throws Exception {
 
     }
+
+    public static void main(String[] args) {
+
+    }
 }
