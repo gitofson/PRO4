@@ -1,7 +1,20 @@
 INSERT INTO human (id, email, firstName, secondName, birthdate) VALUES
-(1, 'as@ff.com', 'Dan', 'Kolář', '2001-01-01'),
-(2, 'aadss@fsdf.com', 'Pavel', 'Fíkovníků', '1900-01-01'),
-(3, 'aadssdfs@fsdf.com', 'Petr', 'Pavel', '1212-07-07'),
-(4,'jirka.potucek@seznam.cz','Jirka','Potůček','2003-2-16'),
-(5, 'ahdslk@seznam.cz','Martin','Louka','2000-06-29')
-;
+(1, 'dan.kolar@gmail.com', 'Dan', 'Kolář', '2001-01-01'),
+(2, 'pavel.fikovniku@seznam.cz', 'Pavel', 'Fíkovníků', '1900-01-01'),
+(3, 'petr.pavel@email.cz', 'Petr', 'Pavel', '1212-07-07'),
+(4, 'jirka.potucek@seznam.cz', 'Jirka', 'Potůček', '2003-02-16'),
+(5, 'martin.louka@spotify.com', 'Martin', 'Louka', '2000-06-29'),
+(6, 'marian.abdul@yahoo.com', 'Marian', 'Abdul', '1975-08-15'),
+(7, 'jan.novak@hotmail.com', 'Jan', 'Novák', '1995-04-12'),
+(8, 'anna.kralova@seznam.cz', 'Anna', 'Králová', '1988-12-31'),
+(9, 'michal.vesely@gmail.com', 'Michal', 'Veselý', '1970-09-15'),
+(10, 'petr.novak@email.cz', 'Petr', 'Novák', '1985-03-20'),
+(11, 'anna.janackova@seznam.cz', 'Anna', 'Janáčková', '1990-07-15'),
+(12, 'jiri.honzik@gmail.com', 'Jiří', 'Honzík', '1978-10-01'),
+(13, 'martina.svobodova@outlook.cz', 'Martina', 'Svobodová', '2001-02-05'),
+(14, 'radek.kral@centrum.cz', 'Radek', 'Král', '1965-11-23'),
+(15, 'tomas.prochazka@yahoo.com', 'Tomáš', 'Procházka', '1989-06-14'),
+(16, 'petra.novotna@seznam.cz', 'Petra', 'Novotná', '1992-09-30'),
+(17, 'jakub.pavelka@email.cz', 'Jakub', 'Pavelka', '1980-12-10'),
+(18, 'klara.vyskocilova@gmail.com', 'Klára', 'Vyskočilová', '1973-05-28'),
+(19, 'jan.bubenik@volny.cz', 'Jan', 'Bubeník', '2002-01-29');
