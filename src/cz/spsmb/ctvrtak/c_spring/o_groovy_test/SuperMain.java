@@ -14,13 +14,28 @@ import java.util.List;
 import java.util.Random;
 
 public class SuperMain {
+    enum Hazedlo {
+        KOSTKA (1,6),
+        MINCE (0,1);
+        private static Random rnd = new Random(1);
+        private int from, to;
+        Hazedlo(int from, int to){
+            this.from = from;
+            this.to = to;
+        }
+        public int hod(){
+            return Hazedlo.rnd.nextInt(this.to - this.from +1) + this.from ;
+        }
+    }
     private  static Random rnd1 = new Random(1);
     private  static Random rnd2 = new Random(1);
     private static  List<Integer> al = new ArrayList<>();
     public static void main(String[] args) throws InterruptedException {
         final int N = 1;
-
-
+        for(int i=0; i<60 ; i++){
+            if(i<30) System.out.print(Hazedlo.KOSTKA.hod() + " ");
+            else System.out.print(Hazedlo.MINCE.hod() + " ");
+        }
         //String inp = "Groovy";
         String inp = "15:30 17:22 18:01 22:22 23:23";
         inp = "2023-03-30 2023-03-31 2023-05-01 2023-08-31";
@@ -52,6 +67,6 @@ public class SuperMain {
             }
         }
 
-        cz.spsmb.ctvrtak.c_spring.o_groovy_test.main.Gui.main(args);
+        //cz.spsmb.ctvrtak.c_spring.o_groovy_test.main.Gui.main(args);
     }
 }
