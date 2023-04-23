@@ -32,8 +32,8 @@ public class SuperMain {
     private static  List<Integer> al = new ArrayList<>();
     public static void main(String[] args) throws InterruptedException {
         final int N = 1;
-        for(int i=0; i<60 ; i++){
-            if(i<30) System.out.print(Hazedlo.KOSTKA.hod() + " ");
+        for(int i=0; i<12 ; i++){
+            if(i<6) System.out.print(Hazedlo.KOSTKA.hod() + " ");
             else System.out.print(Hazedlo.MINCE.hod() + " ");
         }
         //String inp = "Groovy";
@@ -67,6 +67,6 @@ public class SuperMain {
             }
         }
 
-        //cz.spsmb.ctvrtak.c_spring.o_groovy_test.main.Gui.main(args);
+        cz.spsmb.ctvrtak.c_spring.o_groovy_test.main.Gui.main(args);
     }
 }

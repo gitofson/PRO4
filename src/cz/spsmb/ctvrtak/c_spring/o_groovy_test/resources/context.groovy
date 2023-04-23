@@ -158,7 +158,7 @@ beans {
                 ref("t11_0"), ref("t11_1"),ref("t11_2"),ref("t11_3"),ref("t11_4")
         ]
     }
-    testCollection(TestCollection){
+    testCollection12(TestCollection){
         grvCode =
                 "    private static ArrayList<String> al =  new ArrayList()\n" +
                         "\n" +
@@ -171,6 +171,21 @@ beans {
         difficulty = 2
         testCollection = [
                 ref("t12_0"), ref("t12_1"), ref("t12_2"), ref("t12_3")//,ref("t12_4")
+        ]
+    }
+    testCollection(TestCollection){
+        grvCode =
+                "    private static ArrayList<String> al =  new ArrayList()\n" +
+                        "\n" +
+                        "\n" +
+                        "    String check(String in) {\n" +
+                        "\n" +
+                        "\n" +
+                        "        return al.join(\" \")\n" +
+                        "    }\n";
+        difficulty = 3
+        testCollection = [
+                ref("t13_0")
         ]
     }
     t1_0(MainTest) {
@@ -675,18 +690,17 @@ beans {
         out = "kysele sladce hořce"
         mustBeResultSorted = true;
     }
-    t13_(MainTest) {
+    t13_0(MainTest) {
         id = 0
         entry = "Enum: Vytvořte výčtový typ (enum) Hazedlo, který bude mít hodnoty MINCE a KOSTKA. Obě instance budou mít metodu "
         " public int hod(), který pro výčet MINCE vrátí pseudonáhodně 0 - 1 a pro výčet KOSTKA vrátí pseudonáhodné číslo " +
                 " 1 - 6.  Jako generátor použijte statickou proměnnou Random rnd=new Random(1).\n" +
-                " V metodě check 3 krát hoďte mincí a 3 krát hoďte kostkou v tomto pořadí. Výsledek vždy vložte do kolekce " +
+                " V metodě check  6 krát hoďte kostkou a 6 krát hoďte mincí v tomto pořadí. Výsledek vždy vložte do kolekce " +
                 " al. enum Hazedlo zde musí být vnořeno do třídy GroovyScriptTest. Pamatujte, že metoda rnd.nextInt(n) dává " +
                 " čísla od 0 do n bez <0,n)."
 
         inp = ""
-        out = "kysele sladce hořce"
-        mustBeResultSorted = true;
+        out = "4 5 2 4 3 5 0 1 1 1 0 0"
     }
     //2022-04-30T11:36:38.051628200
     welcomeScreen(WelcomeScreen){
