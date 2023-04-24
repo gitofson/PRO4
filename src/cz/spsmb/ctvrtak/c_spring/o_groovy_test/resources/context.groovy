@@ -136,7 +136,7 @@ beans {
         difficulty = 2
         testCollection = [
                 //ref("t10_0"), ref("t10_1")
-                ref("t10_0")
+                ref("t10_1")
         ]
     }
     testCollection11(TestCollection){
@@ -692,7 +692,7 @@ beans {
     }
     t13_0(MainTest) {
         id = 0
-        entry = "Enum: Vytvořte výčtový typ (enum) Hazedlo, který bude mít hodnoty MINCE a KOSTKA. Obě instance budou mít metodu "
+        entry = "Enum: Vytvořte výčtový typ (enum) Hazedlo, který bude mít hodnoty MINCE a KOSTKA. Obě instance budou mít metodu " +
         " public int hod(), který pro výčet MINCE vrátí pseudonáhodně 0 - 1 a pro výčet KOSTKA vrátí pseudonáhodné číslo " +
                 " 1 - 6.  Jako generátor použijte statickou proměnnou Random rnd=new Random(1).\n" +
                 " V metodě check  6 krát hoďte kostkou a 6 krát hoďte mincí v tomto pořadí. Výsledek vždy vložte do kolekce " +
