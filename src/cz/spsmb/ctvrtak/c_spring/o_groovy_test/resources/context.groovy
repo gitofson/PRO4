@@ -1,4 +1,4 @@
-
+import cz.spsmb.ctvrtak.c_spring.o_groovy_test.main.CategoryCollection
 import cz.spsmb.ctvrtak.c_spring.o_groovy_test.main.TestCollection
 import cz.spsmb.ctvrtak.c_spring.o_groovy_test.main.WelcomeScreen
 import cz.spsmb.ctvrtak.c_spring.o_groovy_test.main.MainTest
@@ -16,8 +16,18 @@ beans {
                     "\n" +
                     "        return al.join(\" \")\n" +
                     "    }\n";
+    categoryCollection(CategoryCollection) {
+        categoryCollection = [
+                ref("testCollection1"), ref("testCollection2"), ref("testCollection3"),
+                ref("testCollection4"), ref("testCollection5"), ref("testCollection6"),
+                ref("testCollection7"), ref("testCollection8"), ref("testCollection9"),
+                ref("testCollection10"), ref("testCollection11"), ref("testCollection12"),
+                ref("testCollection13")
+        ]
+    }
     testCollection1(TestCollection){
         grvCode = code_1
+        topic = "Cykly"
         difficulty = 1.0
         testCollection = [
                 ref("t1_0"), ref("t1_1"), ref("t1_2"), ref("t1_3"), ref("t1_4"), ref("t1_5"),
@@ -25,6 +35,7 @@ beans {
     }
     testCollection2(TestCollection){
         grvCode = code_1
+        topic = "Pole"
         difficulty = 1.3
         testCollection = [
                 //ref("t2_0"), ref("t2_1"), ref("t2_2"), ref("t2_3")
@@ -33,6 +44,7 @@ beans {
     }
     testCollection3(TestCollection){
         grvCode = code_1
+        topic = "Řazení"
         difficulty = 2
         testCollection = [
                 ref("t3_0"), ref("t3_1"), ref("t3_2"), ref("t3_3")
@@ -55,6 +67,7 @@ beans {
                         "        }\n" +
                         "        return al.join(\" \")\n" +
                         "    }\n";
+        topic = "Rekurze"
         difficulty = 1.1
         testCollection = [
                 ref("t4_0"), ref("t4_1"), ref("t4_2"), ref("t4_3")
@@ -62,6 +75,7 @@ beans {
     }
     testCollection5(TestCollection){
         grvCode = code_1
+        topic = "Číselné soustavy"
         difficulty = 1
         testCollection = [
                 ref("t5_0"),ref("t5_1"),ref("t5_2"),ref("t5_3")
@@ -69,6 +83,7 @@ beans {
     }
     testCollection6(TestCollection){
         grvCode = code_1
+        topic = "Ternární operátor"
         difficulty = 1
         testCollection = [
                 //ref("t6_0"),ref("t6_1"),ref("t6_2"),
@@ -77,6 +92,7 @@ beans {
     }
     testCollection7(TestCollection){
         grvCode = code_1
+        topic = "Statistika"
         difficulty = 2
         testCollection = [
                 ref("t7_0"), ref("t7_1"), ref("t7_2"), ref("t7_3")
@@ -91,6 +107,7 @@ beans {
                         "\n" +
                         "\n" +
                         "    }\n";
+        topic = "Řetězce"
         difficulty = 3
         testCollection = [
                 ref("t8_0"), ref("t8_1"), ref("t8_2"), ref("t8_3"), ref("t8_4")
@@ -105,6 +122,7 @@ beans {
                 "import java.time.temporal.ChronoUnit;\n"
 
         grvCode = code_1
+        topic = "Datum a čas"
         difficulty = 1
         testCollection = [
                 ref("t9_0"), ref("t9_1"), ref("t9_2"), ref("t9_3"), ref("t9_4")
@@ -134,6 +152,7 @@ beans {
                 "import java.nio.file.Path;\n" +
                 "import java.net.URI;\n"
         difficulty = 2
+        topic = "Práce se soubory"
         testCollection = [
                 //ref("t10_0"), ref("t10_1")
                 ref("t10_1")
@@ -154,8 +173,10 @@ beans {
                         "        return al.join(\" \")\n" +
                         "    }\n";
         difficulty = 3
+        topic = "Vlákna"
         testCollection = [
-                ref("t11_0"), ref("t11_1"),ref("t11_2"),ref("t11_3"),ref("t11_4")
+                //ref("t11_0"), ref("t11_1"),ref("t11_2"),ref("t11_3"),ref("t11_4")
+                ref("t11_1")
         ]
     }
     testCollection12(TestCollection){
@@ -169,11 +190,12 @@ beans {
                         "        return al.join(\" \")\n" +
                         "    }\n";
         difficulty = 2
+        topic = "OOP"
         testCollection = [
                 ref("t12_0"), ref("t12_1"), ref("t12_2"), ref("t12_3")//,ref("t12_4")
         ]
     }
-    testCollection(TestCollection){
+    testCollection13(TestCollection){
         grvCode =
                 "    private static ArrayList<String> al =  new ArrayList()\n" +
                         "\n" +
@@ -184,6 +206,7 @@ beans {
                         "        return al.join(\" \")\n" +
                         "    }\n";
         difficulty = 3
+        topic = "Enum"
         testCollection = [
                 ref("t13_0")
         ]

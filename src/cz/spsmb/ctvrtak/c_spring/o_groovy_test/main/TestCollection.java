@@ -12,6 +12,15 @@ public class TestCollection {
     private String imports;
     private String initGroovyCode;
     private String grvCode;
+    private String topic;
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
 
     public String getInitGroovyCode() {
         return String.format(

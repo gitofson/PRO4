@@ -61,7 +61,8 @@ public class Gui extends Application {
         return context;
     }
 
-    private TestCollection testCollection = context.getBean("testCollection", TestCollection.class);
+    private CategoryCollection categoryCollection = context.getBean("categoryCollection", CategoryCollection.class);
+    private TestCollection testCollection = categoryCollection.getRandomCategory();
     private MainTest test = testCollection.getRandomTest();
 
     private int freeTries = Gui.N_FREE_TRIES;
@@ -97,6 +98,7 @@ public class Gui extends Application {
         scene.getStylesheets().add("gst.css");
         stage.setScene(scene);
         stage.show();
+        stage.setTitle(String.format("%s - zadání č.:%d" , this.testCollection.getTopic(), this.test.getId()));
         Stage stage2 = new Stage();
         stage2.setScene(sawScene);
         stage2.showAndWait();
